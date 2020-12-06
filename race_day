@@ -1,0 +1,24 @@
+/* Generate a race number and assign race time to a runner based on registration status and age. */ 
+
+let early_registration = false; 
+let age = 20; 
+
+if ((early_registration === true) && age > 18) {
+  // Race number will be between 0 and 4999. 
+  raceNumber = Math.floor(Math.random() * 5000);
+} else {
+  // Race number will be between 0 and 999. 
+  raceNumber = Math.floor(Math.random() * 1000);
+}
+
+if (early_registration === true && age > 18) {
+  console.log (`Runner ${raceNumber} will race at 9:30 am.`); 
+} else if (early_registration === false && age > 18) {
+  console.log (`Runner ${raceNumber} will race at 11:00 am.`); 
+} else if (age < 18) {
+  console.log(`Runner ${raceNumber} will race at 12:30 am.`); 
+} else if (age === 18) {
+  console.log(`Runner ${raceNumber}, please see the registration desk.`); 
+}
+
+
