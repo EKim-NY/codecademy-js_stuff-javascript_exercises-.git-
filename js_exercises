@@ -51,3 +51,7 @@ const plantNeedsWater = (day) => {
     return false;
   }
 };
+
+
+// Make the arrow function more concise. 
+const plantNeedsWater = day => day === 'Wednesday' ? true : false; 
