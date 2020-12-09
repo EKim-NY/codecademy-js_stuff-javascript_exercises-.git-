@@ -15,3 +15,17 @@ console.log(`The temperature is ${fahrenheit} degrees Fahrenheit.`);
 let newton = celsius * (33/100); 
 newton = Math.floor(newton); 
 console.log(`The temperateure is ${newton} degrees Newton.`); 
+
+// Example of a helper function or a function that returns a value inside another function. 
+
+function monitorCount(rows, columns) {
+  return rows * columns;
+}
+
+function costOfMonitors(rows, columns) {
+  return monitorCount(rows, columns) * 200; 
+}
+
+const totalCost = costOfMonitors(5, 4); 
+
+console.log(totalCost); 
